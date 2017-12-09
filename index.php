@@ -5,6 +5,9 @@
     <title>Title</title>
 </head>
 <body>
-Labas
+<?php
+$a = 'labas';
+echo strtoupper($a) . ' ' . 'rytas';
+?>
 </body>
 </html>
