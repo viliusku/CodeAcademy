@@ -2,16 +2,13 @@
 
 $cnn = new PDO('mysql:host=test.lt;dbname=test', 'test', 'test');
 
-$sql = "select count(*) as cnt from auto";
-
-$res = $cnn->query($sql);
-
-while ($row=$res->fetch()){
-    echo $row['cnt'].'<br>';
-    //var_export($row);
-}
-
-$res->closeCursor();
+$res = $cnn->prepare("insert into auto (aut_gamintojas,aut_modelis,aut_metai,aut_kaina) values(:gamintojas,:modelis,:metai,:kaina)");
+$x = $res->execute([
+    ':gamintojas' => $_POST['gamintojas'],
+    ':modelis' => $_POST['modelis'],
+    ':metai' => $_POST['metai'],
+    ':kaina' => $_POST['kaina']
+]);
 
 $sql = "select * from auto";
 
@@ -29,4 +26,4 @@ while ($row=$res->fetch()){
 }
 echo '</table>';
 
-$res->closeCursor();
+echo '<a href="pdo-form-frontend.html">Grizti i forma</a>';
