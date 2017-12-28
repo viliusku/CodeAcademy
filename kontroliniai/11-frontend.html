@@ -1,0 +1,21 @@
+<!--
+Sukurkite HTML dokumentą su įvedimo formą. Forma turėtu turėti laukus : 2x tekstiniai laukai: Įmonės pavadinimas, Įmonės kodas, 1x radio pasirinkimas: Kliento tipas‐ bronzinis, sidabrinis, auksinis. Forma turėtu būti nusiųsta į 11uzduotis.php failą metodu POST. 11uzduotis.php faile pridėkite įrašą į sesiją ir redirectinkite vartotoją atgal į įvedimo formos html dokumentą
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form method="post" action="11-backend.php">
+    <label>Įmonės pavadinimas</label><input type="text" name="pavadinimas"><br>
+    <label>Įmonės kodas</label><input type="text" name="kodas"><br>
+    <label>Kliento tipas</label>
+    <input type="radio" value="bronzinis"> Bronzinis
+    <input type="radio" value="sidabrinis"> Sidabrinis
+    <input type="radio" value="auksinis"> Auksinis<br>
+    <input type="submit" value="Siųsti">
+</form>
+</body>
+</html>
