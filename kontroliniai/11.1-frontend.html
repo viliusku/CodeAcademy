@@ -1,3 +1,21 @@
 <!--
 Sukurkite HTML dokumentą 11.1-frontend.html su įvedimo formą. Forma turėtu turėti laukus : 2x tekstiniai laukai: Vardas, Pavardė, 1x radio pasirinkimas: Valgis:‐ mėsiškas, žuvies, vegetariškas. Forma turėtu būti nusiųsta į 11.1-backend.php failą metodu GET. 11.1-backend.php faile pridėkite įrašą į sesiją, įrašykite į tekstinį failą (papildydami jį) 11.1-file.txt (failo atidarymo tipas a)  ir redirectinkite vartotoją atgal į įvedimo formos html dokumentą
 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form method="get" action="11.1-backend.php">
+    <label>Vardas </label><input type="text" name="vardas"><br>
+    <label>Pavardė </label><input type="text" name="pavarde"><br>
+    <label>Valgis </label>
+    <input type="radio" name="valgis" value="Mėsiškas">Mėsiškas
+    <input type="radio" name="valgis" value="Žuvies">Žuvies
+    <input type="radio" name="valgis" value="Vegetariškas">Vegetariškas<br>
+    <input type="Submit" value="Vykdyti">
+</form>
+</body>
+</html>
