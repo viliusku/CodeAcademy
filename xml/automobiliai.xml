@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<table>
+    <row id="honda">
+        <gamintojas>Honda</gamintojas>
+        <modelis>Civic</modelis>
+        <metai>2007</metai>
+    </row>
+    <row id="bmw">
+        <gamintojas>BMW</gamintojas>
+        <modelis>320</modelis>
+        <metai>2005</metai>
+    </row>
+    <row id="lada">
+        <gamintojas>Lada</gamintojas>
+        <modelis>11</modelis>
+        <metai>1985</metai>
+    </row>
+</table>
