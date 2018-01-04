@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('#mygtukas').click(function(){
+                var data = {
+                    'pasirinkimas': $('#forma input[name=pasirinkimas]:checked').val()
+                }
+                console.log(JSON.stringify(data));
+                console.log('ajax vykdama ...');
+                $.ajax({ // AJAX call
+                    type: 'POST',
+                    url: 'ajax-db-backend.php',
+                    dataType: "json", // AJAX data type
+                    data: JSON.stringify(data),
+                    success: function(data, textStatus, jqXHR){
+                        console.log('ajax ivykde ok');
+                        for (var i=0; i<data.length; i++) $('#box').append('<tr><td>' + data[i] + '</td>');
+                    },
+                    error: function(jqXHR, textStatus, errorThrown){
+                        console.log('ajax nepavyko: ' + errorThrown);
+                    }
+                })
+            });
+        });
+    </script>
+</head>
+<body>
+<form id="forma">
+    <input type="radio" value="ja" name="pasirinkimas">3 jauniausi
+    <input type="radio" value="vy" name="pasirinkimas">3 vyriausi
+    <input type="radio" value="vi" name="pasirinkimas">Visi
+    <input id="mygtukas" type="button" value="Pateikti">
+</form>
+<table id="box" style="margin-top: 10px; border: 1px red solid; padding: 10px"></table>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('#mygtukas').click(function(){
+                var data = $('#forma').serialize();
+                console.log(JSON.stringify(data));
+                console.log('ajax 1 vykdama ...');
+                $.ajax({ // AJAX call
+                    type: 'GET',
+                    url: 'ajax-backend.php',
+                    //dataType: "json", // AJAX data type
+                    data: data,
+                    success: function(data, textStatus, jqXHR){
+                        console.log('ajax 1 ivykde ok');
+                        $('#box').text($('#box').text() + ' ' + data);
+                    },
+                    error: function(jqXHR, textStatus, errorThrown){
+                        console.log('ajax 1 nepavyko: ' + errorThrown);
+                    }
+                })
+            });
+            $('#mygtukas2').click(function(){
+                var data = {
+                    'var': $('#forma input[name=vardas]').val(),
+                    'pav': $('#forma input[name=pavarde]').val(),
+                    'gda': $('#forma input[name=gdata]').val()
+                }
+                console.log(JSON.stringify(data));
+                console.log('ajax 2 vykdama ...');
+                $.ajax({ // AJAX call
+                    type: 'POST',
+                    url: 'ajax-backend2.php',
+                    dataType: "json", // AJAX data type
+                    data: JSON.stringify(data),
+                    success: function(data, textStatus, jqXHR){
+                        console.log('ajax 2 ivykde ok');
+                        $('#box').text($('#box').text() + ' ' + data);
+                    },
+                    error: function(jqXHR, textStatus, errorThrown){
+                        console.log('ajax 2 nepavyko: ' + errorThrown);
+                    }
+                })
+            });
+        });
+    </script>
+</head>
+<body>
+<form id="forma">
+    <label>Vardas: </label><input type="text" name="vardas"><br>
+    <label>Pavarde: </label><input type="text" name="pavarde"><br>
+    <label>Gimimo data: </label><input type="text" name="gdata"><br>
+    <input id="mygtukas" type="button" value="Pateikti">
+    <input id="mygtukas2" type="button" value="Pateikti 2">
+</form>
+<div id="box" style="margin-top: 10px; width:200px;min-height:100px; border: 1px red solid; padding: 10px"></div>
+</body>
+</html>
