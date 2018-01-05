@@ -17,7 +17,7 @@ class numberList {
                 $min_i = $i;
             }
         }
-        unset($this->numbers[$min_i]);
+        array_splice($this->numbers, $min_i, 1);
     }
     function getInfo(){
         foreach ($this->numbers as $number){
