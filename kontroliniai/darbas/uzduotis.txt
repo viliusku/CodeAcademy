@@ -1,0 +1,32 @@
+Kuriame veikiantį automobilių nuomos svetainės pavyzdį.
+
+Naudojame: html, css, php, bootstrap, MySQL (nenaudojant java script, jokių kitų karkasų). Duomenų įvedimo kontrolės formoje nedarome.
+
+Svetainės funkcijos:
+1. Pateikti automobilių sąrašą.
+2. Papildyti automobilių sąrašą.
+3. Pašalinti automobilį iš sąrašo.
+4. Pakeisti automobilio duomenis.
+5. Pašalinti automobilį iš sąrašo.
+6. Užsakyti automobilį.
+
+MySQL saugomi duomenys:
+1. Gamintojas
+2. Modelis
+3. Metai
+4. Kaina EUR/dienai
+5. Pastabos
+6. Nuotrauka
+7. Nuotraukos mime/type
+
+Užsakymo duomenys:
+1. Automobilis
+2. Vardas
+3. Pavardė
+4. Data, nuo kada užsakomas automobilis
+5. Kiek dienų bus naudojamas automobilis
+6. Kuriame mieste pasiimamas automobilis
+7. Kuriame mieste gražinamas automobilis
+8. Bendra nuomos kaina ( dienos kaina x dienų skaičiaus)
+
+Kuriamos svetainės maketo screenshot'ai yra /kontroliniai/darbas/images
