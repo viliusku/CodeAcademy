@@ -45,11 +45,27 @@
                         <a class="nav-link" href="/kontroliniai/darbas"><i class="fa fa-home" aria-hidden="true"></i>Titulinis</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/kontroliniai/darbasauto-actions.php"><i class="fa fa-car" aria-hidden="true"></i>Įdėti naują automobilį</a>
+                        <a class="nav-link" href="/kontroliniai/darbas/auto-actions.php"><i class="fa fa-car" aria-hidden="true"></i>Įdėti naują automobilį</a>
                     </li>
                 </ul>
             </nav>
         </div>
+    </div>
+    <div class="mx-auto site-body">
+        <table class="table table-responsive table-striped mt-1 site-car-list">
+            <thead class="thead-light">
+                <tr>
+                    <th>Nuotrauka</th>
+                    <th>Gamintojas</th>
+                    <th>Modelis</th>
+                    <th>Metai</th>
+                    <th>Kaina</th>
+                    <th>Veiksmai</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
     </div>
 </div>
 
