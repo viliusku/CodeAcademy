@@ -7,8 +7,7 @@ Svetainės funkcijos:
 2. Papildyti automobilių sąrašą.
 3. Pašalinti automobilį iš sąrašo.
 4. Pakeisti automobilio duomenis.
-5. Pašalinti automobilį iš sąrašo.
-6. Užsakyti automobilį.
+5. Užsakyti automobilį.
 
 MySQL saugomi duomenys:
 1. Gamintojas
