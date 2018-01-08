@@ -4,3 +4,8 @@
 .site-logo { height: 70px }
 .site-title { font-size: 20px;  padding-left: 10px }
 .site-header-top-grid { position: absolute; right: 0px; top: 0px; white-space: nowrap }
+.site-header-top-grid .col { line-height: 30px }
+.site-header-top-grid .col a { font-size: 30px }
+.site-header-top-grid .col .fa-facebook-square { color: #3b5999 }
+.site-header-top-grid .col .fa-twitter-square { color: #55acee }
+.site-header-top-grid .col .fa-google-plus-square { color: #dd4b39 }

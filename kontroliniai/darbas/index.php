@@ -28,9 +28,10 @@
                     <h1 class="site-title">Automobilių nuoma 7/24</h1>
                     <div class="row site-header-top-grid">
                         <div class="col p-0"><button class="btn m-0 p-0 pb-1 pl-2 pr-2"><i class="fa fa-phone pr-1" aria-hidden="true"></i>+370 687 44987</button></div>
-                        <div class="col p-0"></div>
-                        <div class="col p-0"></div>
-                        <div class="col p-0"></div>
+                        <div class="col p-0 pl-1"><a href="https://www.facebook.com"><i class="fa fa-facebook-square" aria-hidden="true"></i></a></div>
+                        <div class="col p-0 pl-1"><a href="https://www.facebook.com"><i class="fa fa-twitter-square" aria-hidden="true"></i></a></div>
+                        <div class="col p-0 pl-1"><a href="https://www.facebook.com"><i class="fa fa-google-plus-square" aria-hidden="true"></i></a></div>
+
                     </div>
                 </td>
             </tr>
