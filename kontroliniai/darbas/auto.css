@@ -1,1 +1,6 @@
 .site-header { background-color: #f8f8f8}
+.site-header table { max-width: 800px; height: 77px; position: relative }
+.site-header table tr td:first-child { width: 1% }
+.site-logo { height: 70px }
+.site-title { font-size: 20px;  padding-left: 10px }
+.site-header-top-grid { position: absolute; right: 0px; top: 0px; white-space: nowrap }
