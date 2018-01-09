@@ -44,8 +44,19 @@ class auto {
         }
         return $cars;
     }
-    function delete($id){
-
+    function delete ($id){
+        $ok = false;
+        $this->message = "Automobilio šalinimas iš DB ";
+        try {
+            $sql = "delete from auto where aut_id=:id";
+            $res = $this->cnn->prepare($sql);
+            $res->execute([':id' => $id]);
+            $this->message .= "sėkmingas";
+            $ok = true;
+        } catch (PDOException $e) {
+            $this->message .= 'nesėkmingas: ' . $e->getMessage();
+        }
+        return $ok;
     }
 }
 /*
