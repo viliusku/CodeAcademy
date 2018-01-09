@@ -44,9 +44,13 @@ class auto {
         }
         return $cars;
     }
-}
+    function delete($id){
 
+    }
+}
+/*
 $a = new auto();
 var_dump($a);
 $b = $a->getList();
 var_dump($b);
+*/

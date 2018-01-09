@@ -1,3 +1,11 @@
+<?php
+
+include 'auto.php';
+$auto = new auto();
+$cars = $auto->getList();
+
+?>
+
 <!DOCTYPE html>
 <html lang="lt">
 <head   >
@@ -52,6 +60,7 @@
         </div>
     </div>
     <div class="mx-auto site-body">
+        <form action="auto-actions.php" method="POST">
         <table class="table table-responsive table-striped mt-1 site-car-list">
             <thead class="thead-light">
                 <tr>
@@ -64,9 +73,19 @@
                 </tr>
             </thead>
             <tbody>
+            <?php
+                foreach($cars as $car){
+                   echo "<tr><td><img src=data:{$car['mime']};base64,".base64_encode($car['nuotrauka'])."></td><td>{$car['gamintojas']}</td><td>{$car['modelis']}</td><td>{$car['metai']}</td><td>{$car['kaina']}</td><td style='white-space: nowrap'>
 
+<button class='btn btn-danger mr-1' type='submit' name='delete' value='{$car['id']}'>Pašalinti</button>
+<button class='btn btn-info mr-1' type='submit' name='update-form' value='{$car['id']}'>Redaguoti</button>
+<button class='btn btn-success' type='submit' name='rent-form' value='{$car['id']}'>Užsakyti</button>
+</td></tr>";
+                }
+            ?>
             </tbody>
         </table>
+        </form>
     </div>
 </div>
 
