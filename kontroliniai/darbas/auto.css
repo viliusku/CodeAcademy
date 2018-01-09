@@ -17,5 +17,5 @@
 .site-body .site-car-list img { width: 120px }
 .site-body .site-car-list thead th { border-top: 1px black solid; border-bottom: 1px black solid }
 .site-body .site-car-list tfoot th { border-top: 1px black solid }
-.site-body .site-car-list td { vertical-align: middle!important }
+.site-body .site-car-list td { vertical-align: middle }
 .site-body .btn { cursor: pointer }

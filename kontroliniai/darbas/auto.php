@@ -48,7 +48,7 @@ class auto {
         $ok = false;
         $this->message = "Automobilio šalinimas iš DB ";
         try {
-            $sql = "delete from auto where aut_id=:id";
+            $sql = "delete from auto where jaut_id=:id";
             $res = $this->cnn->prepare($sql);
             $res->execute([':id' => $id]);
             $this->message .= "sėkmingas";
@@ -59,9 +59,4 @@ class auto {
         return $ok;
     }
 }
-/*
-$a = new auto();
-var_dump($a);
-$b = $a->getList();
-var_dump($b);
-*/
+?>
