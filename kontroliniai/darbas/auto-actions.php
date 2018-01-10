@@ -33,7 +33,7 @@ elseif (isset($_POST['update-form'])){
 elseif (isset($_POST['rent-form'])){
     include 'auto-rent-form.php';
 }
-else include 'auto-insert-form.php';
+else include 'auto-update-form.php';
 ?>
     </div>
 </div>
