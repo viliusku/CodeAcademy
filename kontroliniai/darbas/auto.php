@@ -84,7 +84,7 @@ class auto {
         try {
             $sql = "select aut_id, aut_gamintojas, aut_modelis, aut_metai, aut_kaina, aut_pastabos, aut_nuotrauka, aut_mime from auto where aut_id=:id";
             $res = $this->cnn->prepare($sql);
-            $res->execute([':id' => $this->id]);
+            $res->execute([':id' => $id]);
             if ($row = $res->fetch()) {
                 $car = [
                     'id' => $row['aut_id'],
