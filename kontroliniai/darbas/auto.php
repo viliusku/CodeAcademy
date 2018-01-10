@@ -48,9 +48,29 @@ class auto {
         $ok = false;
         $this->message = "Automobilio šalinimas iš DB ";
         try {
-            $sql = "delete from auto where jaut_id=:id";
+            $sql = "delete from auto where aut_id=:id";
             $res = $this->cnn->prepare($sql);
             $res->execute([':id' => $id]);
+            $this->message .= "sėkmingas";
+            $ok = true;
+        } catch (PDOException $e) {
+            $this->message .= 'nesėkmingas: ' . $e->getMessage();
+        }
+        return $ok;
+    }
+    function insert($car){
+        $ok = false;
+        $this->message = "Automobilio įdėjimas į DB ";
+        try {
+            $sql = "insert into auto (aut_gamintojas, aut_modelis, aut_metai, aut_kaina, aut_pastabos) values(:gam,:mod,:met,:kai,:pas)";
+            $res = $this->cnn->prepare($sql);
+            $res->execute([
+                ':gam' => $car['gamintojas'],
+                ':mod' => $car['modelis'],
+                ':met' => $car['metai'],
+                ':kai' => $car['kaina'],
+                ':pas' => $car['pastabos']
+            ]);
             $this->message .= "sėkmingas";
             $ok = true;
         } catch (PDOException $e) {
