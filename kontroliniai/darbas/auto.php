@@ -95,8 +95,8 @@ class auto {
             $res->bindValue(4, $car['kaina']);
             $res->bindValue(5, $car['pastabos']);
             if (isset($car['nuotrauka'])) {
-                $res->bindValue(6, $car['nuotrauka']);
-                $res->bindValue(7, $car['mime'], PDO::PARAM_LOB);
+                $res->bindValue(6, $car['nuotrauka'], PDO::PARAM_LOB);
+                $res->bindValue(7, $car['mime']);
                 $res->bindValue(8, $car['id']);
             }
             else {
