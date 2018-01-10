@@ -62,15 +62,14 @@ class auto {
         $ok = false;
         $this->message = "Automobilio įdėjimas į DB ";
         try {
-            $sql = "insert into auto (aut_gamintojas, aut_modelis, aut_metai, aut_kaina, aut_pastabos) values(:gam,:mod,:met,:kai,:pas)";
+            $sql = "insert into auto (aut_gamintojas, aut_modelis, aut_metai, aut_kaina, aut_pastabos) values(?,?,?,?,?)";
             $res = $this->cnn->prepare($sql);
-            $res->execute([
-                ':gam' => $car['gamintojas'],
-                ':mod' => $car['modelis'],
-                ':met' => $car['metai'],
-                ':kai' => $car['kaina'],
-                ':pas' => $car['pastabos']
-            ]);
+            $res->bindValue(1, $car['gamintojas']);
+            $res->bindValue(2, $car['modelis']);
+            $res->bindValue(3, $car['metai']);
+            $res->bindValue(4, $car['kaina']);
+            $res->bindValue(5, $car['pastabos']);
+            $res->execute();
             $this->message .= "sėkmingas";
             $ok = true;
         } catch (PDOException $e) {
