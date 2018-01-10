@@ -51,10 +51,6 @@
     // $car['nuotrauka'] = fread($fp, filesize($_FILES['nuotrauka']['tmp_name']));
     // fclose($fp);
     // $car['mime'] = $_FILES['nuotrauka']['type'];
-    var_dump($_POST);
-    var_dump($_FILES);
-    var_dump($car);
-    exit;
 
     if ($ok){
         $ok = $auto->insert($car);

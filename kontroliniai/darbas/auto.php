@@ -62,13 +62,15 @@ class auto {
         $ok = false;
         $this->message = "Automobilio įdėjimas į DB ";
         try {
-            $sql = "insert into auto (aut_gamintojas, aut_modelis, aut_metai, aut_kaina, aut_pastabos) values(?,?,?,?,?)";
+            $sql = "insert into auto (aut_gamintojas, aut_modelis, aut_metai, aut_kaina, aut_pastabos, aut_mime, aut_nuotrauka) values(?,?,?,?,?,?,?)";
             $res = $this->cnn->prepare($sql);
             $res->bindValue(1, $car['gamintojas']);
             $res->bindValue(2, $car['modelis']);
             $res->bindValue(3, $car['metai']);
             $res->bindValue(4, $car['kaina']);
             $res->bindValue(5, $car['pastabos']);
+            $res->bindValue(6, $car['mime']);
+            $res->bindValue(7, $car['nuotrauka'], PDO::PARAM_LOB);
             $res->execute();
             $this->message .= "sėkmingas";
             $ok = true;
