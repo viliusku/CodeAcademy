@@ -34,5 +34,5 @@ if ($car === false){
         <input type="file" class="form-control" id="nuotrauka" name="nuotrauka">
         <button type="submit" class="btn btn-primary mt-1" name="submit">Vykdyti</button>
     </div>
-    <input type="hidden" name="id" value="">
+    <input type="hidden" name="id" value="<?php echo $car['id'] ?>">
 </form>

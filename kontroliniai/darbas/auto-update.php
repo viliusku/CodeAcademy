@@ -26,6 +26,7 @@
     $auto = new auto();
 
     $car = [
+        'id' => $_POST['id'],
         'gamintojas' => $_POST['gamintojas'],
         'modelis' => $_POST['modelis'],
         'metai' => $_POST['metai'],
@@ -33,6 +34,7 @@
         'pastabos' => $_POST['pastabos']
     ];
     $ok = true;
+
     if (isset($_FILES["nuotrauka"]) && strlen($_FILES["nuotrauka"]['name'])>0){
         $message = 'Upload ';
         $check = getimagesize($_FILES["nuotrauka"]["tmp_name"]);
@@ -53,7 +55,12 @@
     // $car['mime'] = $_FILES['nuotrauka']['type'];
 
     if ($ok){
-        $ok = $auto->insert($car);
+        if (strlen($car['id'])>0) {
+            $ok = $auto->update($car);
+        }
+        else {
+            $ok = $auto->insert($car);
+        }
         if ($ok) $bg = 'bg-success'; else $bg = 'bg-danger';
         $message = $auto->message;
     }
