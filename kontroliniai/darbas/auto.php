@@ -79,6 +79,33 @@ class auto {
         }
         return $ok;
     }
+    function update($car){
+        $ok = false;
+        $this->message = "Automobilio duomenų keitimas DB ";
+        try {
+            $sql = "update auto set aut_gamintojas=?, aut_modelis=?, aut_metai=?, aut_kaina=?, aut_pastabos=?";
+            if (isset($car['nuotrauka'])){
+                $sql.= ",aut_nuotrauka=?, aut_mime=?";
+            }
+            $sql.= " where aut_id=?";
+            $res = $this->cnn->prepare($sql);
+            $res->bindValue(1, $car['gamintojas']);
+            $res->bindValue(2, $car['modelis']);
+            $res->bindValue(3, $car['metai']);
+            $res->bindValue(4, $car['kaina']);
+            $res->bindValue(5, $car['pastabos']);
+            if (isset($car['nuotrauka'])) {
+                $res->bindValue(6, $car['mime']);
+                $res->bindValue(7, $car['nuotrauka'], PDO::PARAM_LOB);
+            }
+            $res->execute();
+            $this->message .= "sėkmingas";
+            $ok = true;
+        } catch (PDOException $e) {
+            $this->message .= 'nesėkmingas: ' . $e->getMessage();
+        }
+        return $ok;
+    }
     function get($id){
         $this->message = "Automobilio duomenų skaitymas iš DB ";
         try {
