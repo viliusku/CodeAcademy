@@ -79,5 +79,8 @@ class auto {
         }
         return $ok;
     }
+    function get($id){
+
+    }
 }
 ?>
