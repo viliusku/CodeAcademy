@@ -80,7 +80,30 @@ class auto {
         return $ok;
     }
     function get($id){
-
+        $this->message = "Automobilio duomenų skaitymas iš DB ";
+        try {
+            $sql = "select aut_id, aut_gamintojas, aut_modelis, aut_metai, aut_kaina, aut_pastabos, aut_nuotrauka, aut_mime from auto where aut_id=:id";
+            $res = $this->cnn->prepare($sql);
+            $res->execute([':id' => $this->id]);
+            if ($row = $res->fetch()) {
+                $car = [
+                    'id' => $row['aut_id'],
+                    'gamintojas' => $row['aut_gamintojas'],
+                    'modelis' => $row['aut_modelis'],
+                    'metai' => $row['aut_metai'],
+                    'kaina' => $row['aut_kaina'],
+                    'pastabos' => $row['aut_pastabos'],
+                    'nuotrauka' => $row['aut_nuotrauka'],
+                    'mime' => $row['aut_mime']
+                ];
+                $this->message .= "sėkmingas";
+            } else $this->message .= "nesėkmingas: automobilis nerastas";
+        }
+        catch(PDOException $e) {
+            $this->message .= 'nesėkmingas: ' . $e->getMessage();
+            $car = false;
+        }
+        return $car;
     }
 }
 ?>
