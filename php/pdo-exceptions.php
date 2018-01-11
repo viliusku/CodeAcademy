@@ -9,6 +9,7 @@ try {
     while ($a = $res->fetch()) {
         echo $a['aut_gamintojas'] . '<br>';
     }
+
 }
 catch(PDOException $err) {
     echo $err->getMessage();
