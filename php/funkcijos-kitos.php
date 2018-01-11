@@ -34,9 +34,11 @@ array_splice($b, 2, 2);
 var_dump($b);
 
 // date(), time()
-echo date("y-m-d H:m:s");
+echo date("Y-m-d H:m:s");
 echo '<br>';
 echo time();
+echo '<br>';
+echo uniqid();
 echo '<br>';
 
 // die, exit
@@ -44,7 +46,7 @@ echo '<br>';
 //@fopen('kadabra', 'r') or exit('kadabra nerastas');
 
 // regex
-if (preg_match("/^.a/", $tekstas)) echo 'rasta'; else echo 'nerasta';
+if (preg_match("/^.a.{2}s/", $tekstas)) echo 'rasta'; else echo 'nerasta';
 echo '<br>';
 
 $tekstas = "kaina yra 10 usd";
