@@ -1,4 +1,0 @@
-Užduotis: "Tarkime turime lentelę duomenų bazėje ‘Imonės’ su laukais ‘id, imone, imones_kodas, kliento_tipas, kliento_registravimo_data’. Parašykite SQL užklausą gauti visus duomenis apie 5 naujausias įmonęs."
-
-SQL užklausa:
-"select imo_id, imo_kodas, imo_pavadinimas, imo_kli_tipas, imo_kli_reg_data from imones order by imo_kli_reg_data desc limit 0,5"

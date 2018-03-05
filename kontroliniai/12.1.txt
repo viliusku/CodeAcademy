@@ -1,4 +1,0 @@
-Užduotis: "sukurkite lentelę ‘asmenys’ duomenų bazėje su laukais ‘asm_id, asm_vardas, asm_pavarde, asm_gdata’. Įveskite į lentelę 5 asmenis. Parašykite SQL užklausą gauti visus duomenis apie 3 vyriausius asmenis"
-
-SQL užklausa:
-"select asm_id, asm_vardas, asm_pavarde, asm_gdata from asmenys order by asm_gdata limit 0,3"
