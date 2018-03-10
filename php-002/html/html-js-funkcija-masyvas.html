@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function fnc(m){
+        for(var i=0; i<m.length; i++){
+            var elementas = m[i];
+            var kvadratas = elementas * elementas;
+            m[i] = kvadratas;
+        }
+        return m;
+    }
+    var mas = [1,2,3,5];
+    console.log(JSON.stringify(fnc(mas)));
+
+</script>
+ok
+'Peter'
+['tekstas' => 'Peter', 'ilgis' => 5]
+</body>
+</html>

@@ -10,4 +10,4 @@ function f($m){
     return $m;
 }
 
-var_dump(['aaa', 'bbbb', 'tttttt']);
+var_dump(f(['aaa', 'bbbb', 'tttttt']));
