@@ -13,6 +13,6 @@ $(document).ready(function(){
             success: function(data){
                 $('#frm input[name=kaina]').val(data);
             }
-        })
+        });
     });
 });
