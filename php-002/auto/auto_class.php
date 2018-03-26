@@ -1,4 +1,7 @@
 <?php
 class cars {
-    private getCnn
+    private $cnn;
+    private function getCnn($srv, $db, $usr, $psw){
+
+    }
 }
