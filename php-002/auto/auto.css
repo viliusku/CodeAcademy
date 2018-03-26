@@ -5,9 +5,10 @@
 
 }
 .footer {
-    background-color: black;
+    background-color: #555;
     color: white;
     text-align: center;
+    padding: 5px 0px
 }
 .header-top {
     float: right;
