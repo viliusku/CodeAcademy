@@ -2,10 +2,12 @@
     height: 170px;
 }
 .body {
-    border: 1px solid green;
+
 }
 .footer {
-    border: 1px solid green;
+    background-color: black;
+    color: white;
+    text-align: center;
 }
 .header-top {
     float: right;
@@ -23,3 +25,7 @@
     width: 80%;
 }
 .header-menu img { max-height: 80px }
+.body-text p {
+    width: 500px;
+    text-align: center;
+}
