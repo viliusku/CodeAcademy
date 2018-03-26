@@ -1,0 +1,21 @@
+.header {
+    border: 1px solid red;
+    height: 200px;
+}
+.body {
+    border: 1px solid green;
+}
+.footer {
+    border: 1px solid green;
+}
+.header-top {
+    float: right;
+}
+.header-top-phone {
+    white-space: nowrap;
+    line-height: 42px;
+}
+.header-top-fb {
+    color: #3B5998;
+    font-size: 28px;
+}
