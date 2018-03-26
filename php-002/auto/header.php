@@ -28,11 +28,11 @@
         <div class="header-menu mx-auto">
             <nav class="navbar navbar-expand-sm bg-dark navbar-dark rounded">
                 <!-- Brand -->
-                <a class="navbar-brand" href="#"><img class="rounded" src="logo.jpg"></a>
+                <a class="navbar-brand" href="/php-002/auto"><img class="rounded" src="logo.jpg"></a>
                 <!-- Links -->
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Link 1</a>
+                        <a class="nav-link" href="sarasas.php">Sąrašas</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Link 2</a>
