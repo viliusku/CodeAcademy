@@ -1,6 +1,5 @@
 .header {
-    border: 1px solid red;
-    height: 200px;
+    height: 170px;
 }
 .body {
     border: 1px solid green;
@@ -19,3 +18,8 @@
     color: #3B5998;
     font-size: 28px;
 }
+.header-menu {
+    clear: both;
+    width: 80%;
+}
+.header-menu img { max-height: 80px }
