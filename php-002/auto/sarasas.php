@@ -1,5 +1,8 @@
 <?php
 include 'header.php';
+include 'auto_class.php';
+$auto = new cars();
+$cars = $auto->getList();
 ?>
 <table class="table table-striped table-bordered">
     <thead class="thead-light">
@@ -12,7 +15,19 @@ include 'header.php';
         </tr>
     </thead>
     <tbody>
-
+    <?php
+        foreach($cars as $car){
+            ?>
+            <tr>
+                <td><?php echo $car['nr'] ?></td>
+                <td><?php echo $car['gamintojas'] ?></td>
+                <td><?php echo $car['modelis'] ?></td>
+                <td><?php echo $car['metai'] ?></td>
+                <td><?php echo $car['kaina'] ?></td>
+            </tr>
+            <?php
+        }
+    ?>
     </tbody>
 </table>
 <?php
