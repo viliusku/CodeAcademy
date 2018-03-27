@@ -1,4 +1,7 @@
 <?php
+$auto = new cars();
+$car = $auto->getCar($_POST['edit']);
+var_dump($car);
 ?>
 <form method="post" action="auto-update.php" enctype="multipart/form-data">
     <div class="form-group">
