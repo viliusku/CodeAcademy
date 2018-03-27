@@ -1,8 +1,21 @@
 <?php
 $auto = new cars();
-$car = $auto->getCar($_POST['edit']);
+if (isset($_POST['edit'])){
+    $car = $auto->getCar($_POST['edit']);
+    $url = 'redaguoti-vykdymas.php';
+}
+else {
+    $car = [
+        'id'=> '',
+        'gamintojas' => '',
+        'modelis' => '',
+        'metai' => '',
+        'kaina' => ''
+    ];
+    $url = 'sukurti-vykdymas.php';
+}
 ?>
-<form method="post" action="redaguoti-vykdymas.php">
+<form method="post" action="<?php echo $url ?>">
     <div class="form-group">
         <label for="gamintojas">Gamintojas:</label>
         <input type="text" class="form-control" id="gamintojas" name="gamintojas" value="<?php echo $car['gamintojas'] ?>">

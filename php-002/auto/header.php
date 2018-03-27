@@ -35,10 +35,10 @@
                         <a class="nav-link" href="sarasas.php">Sąrašas</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Link 2</a>
+                        <a class="nav-link" href="sukurti.php">Sukūrti</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Link 3</a>
+                        <a class="nav-link" href="http://www.codeacademy.lt" target="_blank">CodeAcademy</a>
                     </li>
                 </ul>
             </nav>

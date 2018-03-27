@@ -81,10 +81,30 @@ class cars {
         $this->getCnn('localhost', 'auto', 'root');
         $this->message = '';
         try {
-            $sql = "update auto set car_gamintojas=:gam, car_modelis=:mod, car_metai=:met,car_kaina=:kai, where car_id=:id";
+            $sql = "update auto set car_gamintojas=:gam, car_modelis=:mod, car_metai=:met,car_kaina=:kai where car_id=:id";
             $res = $this->cnn->prepare($sql);
             $res->execute([
                 ':id' => $id,
+                ':gam' => $gamintojas,
+                ':mod' => $modelis,
+                ':met' => $metai,
+                ':kai' => $kaina
+            ]);
+            $res->closeCursor();
+            return true;
+        }
+        catch(PDOException $e) {
+            $this->message = $e->getMessage();
+            return false;
+        }
+    }
+    public function insCar($gamintojas, $modelis, $metai, $kaina){
+        $this->getCnn('localhost', 'auto', 'root');
+        $this->message = '';
+        try {
+            $sql = "insert into auto (car_gamintojas, car_modelis, car_metai,car_kaina) value(:gam, :mod, :met, :kai)";
+            $res = $this->cnn->prepare($sql);
+            $res->execute([
                 ':gam' => $gamintojas,
                 ':mod' => $modelis,
                 ':met' => $metai,
