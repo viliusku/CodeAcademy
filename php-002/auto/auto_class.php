@@ -77,4 +77,25 @@ class cars {
             return false;
         }
     }
+    public function updCar($id, $gamintojas, $modelis, $metai, $kaina){
+        $this->getCnn('localhost', 'auto', 'root');
+        $this->message = '';
+        try {
+            $sql = "update auto set car_gamintojas=:gam, car_modelis=:mod, car_metai=:met,car_kaina=:kai, where car_id=:id";
+            $res = $this->cnn->prepare($sql);
+            $res->execute([
+                ':id' => $id,
+                ':gam' => $gamintojas,
+                ':mod' => $modelis,
+                ':met' => $metai,
+                ':kai' => $kaina
+            ]);
+            $res->closeCursor();
+            return true;
+        }
+        catch(PDOException $e) {
+            $this->message = $e->getMessage();
+            return false;
+        }
+    }
 }
