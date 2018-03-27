@@ -3,7 +3,7 @@ $auto = new cars();
 $car = $auto->getCar($_POST['edit']);
 var_dump($car);
 ?>
-<form method="post" action="auto-update.php" enctype="multipart/form-data">
+<form method="post" action="redaguoti-vykdymas.php">
     <div class="form-group">
         <label for="gamintojas">Gamintojas:</label>
         <input type="text" class="form-control" id="gamintojas" name="gamintojas" value="">
