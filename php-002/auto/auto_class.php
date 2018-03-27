@@ -43,6 +43,33 @@ class cars {
             $sql = "delete from auto where car_id=:id";
             $res = $this->cnn->prepare($sql);
             $res->execute([':id' => $id]);
+            if ($row = $res->fetch()) {
+                $m = [];
+                $m['id'] = $row['car_id'];
+                $m['gamintojas'] = $row['car_gamintojas'];
+                $m['modelis'] = $row['car_modelis'];
+                $m['metai'] = $row['car_metai'];
+                $m['kaina'] = $row['car_kaina'];
+                $res->closeCursor();
+                return $m;
+            } else {
+                $this->message = "Automobilis nerastas";
+                return false;
+            }
+        }
+        catch(PDOException $e) {
+            $this->message = $e->getMessage();
+            return false;
+        }
+    }
+    public function getCar($id){
+        $this->getCnn('localhost', 'auto', 'root');
+        $this->message = '';
+        try {
+            $sql = "select * from auto where car_id=:id";
+            $res = $this->cnn->prepare($sql);
+            $res->execute([':id' => $id]);
+            if ()
             $res->closeCursor();
             return true;
         }
