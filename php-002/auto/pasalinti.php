@@ -1,7 +1,7 @@
 <?php
 
 $result = $auto->delCar($_POST['delete']);
-if ($result) header('/php-002/auto/sarasas.php');
+if ($result) header('location: /php-002/auto/sarasas.php');
 else {
     ?>
     <div class="jumbotron p-2 bg-danger">
