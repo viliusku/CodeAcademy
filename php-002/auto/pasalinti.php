@@ -1,5 +1,5 @@
 <?php
-
+$auto = new cars();
 $result = $auto->delCar($_POST['delete']);
 if ($result) header('location: /php-002/auto/sarasas.php');
 else {
