@@ -35,5 +35,20 @@ class cars {
             $this->message = $e->getMessage();
             return false;
         }
-}
+    }
+    public function delCar($id){
+        $this->getCnn('localhost', 'auto', 'root');
+        $this->message = '';
+        try {
+            $sql = "delete from auto where car_id=:id";
+            $res = $this->cnn->prepare($sql);
+            $res->execute([':id' => $id]);
+            $res->closeCursor();
+            return true;
+        }
+        catch(PDOException $e) {
+            $this->message = $e->getMessage();
+            return false;
+        }
+    }
 }
