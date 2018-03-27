@@ -21,6 +21,7 @@ class cars {
             while ($row = $res->fetch()) {
                 $m = [];
                 $m['nr'] = ++$i;
+                $m['id'] = $row['car_id'];
                 $m['gamintojas'] = $row['car_gamintojas'];
                 $m['modelis'] = $row['car_modelis'];
                 $m['metai'] = $row['car_metai'];
