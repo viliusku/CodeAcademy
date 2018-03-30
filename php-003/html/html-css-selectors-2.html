@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .lentele {
+            border-collapse: collapse;
+        }
+        .lentele td, .lentele th {
+            border: 1px solid red;
+            padding: 10px 20px
+        }
+        .lentele > thead > tr > th {
+            background-color: black;
+            color: white;
+            border: 0px;
+            border-top: 1px solid red;
+        }
+        .lentele > thead > tr > th:first-child {
+            border-right: 1px solid white;
+            border-left: 1px solid red;
+        }
+        .lentele > thead > tr > th:last-child {
+            border-left: 1px solid white;
+            border-right: 1px solid red;
+        }
+    </style>
+</head>
+<body>
+<table class="lentele">
+    <thead>
+        <tr>
+            <th>Nr</th>
+            <th>Antraštė</th>
+            <th>Pastaba</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>11</td>
+            <td colspan="2">12 13</td>
+        </tr>
+        <tr>
+            <td rowspan="2">21 31</td>
+            <td>22</td>
+            <td>23</td>
+        </tr>
+        <tr>
+            <td>32</td>
+            <td>
+                <table>
+                    <tr><td>aaa</td><td>bbb</td></tr>
+                    <tr><td>ccc</td><td>ddd</td></tr>
+                </table>
+            </td>
+        </tr>
+    </tbody>
+</table>
+</body>
+</html>
