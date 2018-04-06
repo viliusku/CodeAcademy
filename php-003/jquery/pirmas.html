@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+           $('#aaa').click(function(){
+               //alert('Buvo paspausta');
+               console.log('Buvo paspausta'); // cia konsole
+               /* cia komentaras */
+               $('.para').text(
+                   $('.para').text() + ' labas'
+               );
+           });
+           $('#btn').click(function(){
+               $('.para').html(
+                   $('.para').html() + ' <span class="yyy">rytas</span>'
+               );
+           });
+            $('#btn2').click(function(){
+                $('.para').hide();
+            });
+            $('#btn3').click(function(){
+                $('.para').show();
+            });
+        });
+    </script>
+    <style>
+        .yyy {
+            font-weight: bold
+        }
+    </style>
+</head>
+<body>
+<a id="aaa">Labas</a>
+<p class="para">abc</p>
+<button id="btn">XXX</button>
+<button id="btn2">zzz</button>
+<button id="btn3">uuu</button>
+</body>
+</html>

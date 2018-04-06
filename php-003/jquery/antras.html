@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('.cell').click(function(){
+               //$(this).css('background-color', 'black');
+               /*
+                $(this).css({
+                    'background-color': 'black',
+                    'color': 'white'
+                });
+                */
+               if ($(this).hasClass('cell-dark')){
+                   $(this).removeClass('cell-dark');
+               }
+               else {
+                $(this).addClass('cell-dark');
+               }
+            });
+            $('#btn').click(function(){
+               $('.table .row').eq(0).find('.cell').eq(1).css({
+                  'background-color': 'red'
+               });
+            });
+        });
+    </script>
+    <style>
+        .table { display: table }
+        .row { display: table-row }
+        .cell {
+            display: table-cell;
+            border: 1px solid #cccccc;
+            padding: 10px 20px;
+        }
+        .cell:hover {
+            background-color: black;
+            color: white;
+        }
+        .cell-dark {
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+<div class="table"> <!-- tas pats kaip table tagas -->
+    <div class="row"> <!-- tas pats kaip tr tagas -->
+        <div class="cell">a1</div> <!-- tas pats kaip td tagas -->
+        <div class="cell">b1</div>
+    </div>
+    <div class="row"> <!-- tas pats kaip tr tagas -->
+        <div class="cell">a1</div> <!-- tas pats kaip td tagas -->
+        <div class="cell">b1</div>
+    </div>
+</div>
+<button id="btn">1-1 raudonas pagrindas</button>
+</body>
+</html>
