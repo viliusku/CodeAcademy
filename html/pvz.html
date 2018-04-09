@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .table > tbody > tr > td {
+            border: 1px #ccc solid;
+        }
+        .table > tbody > tr > td:first-child {
+            border: 1px red solid;
+        }
+        #a123 { font-weight: bold }
+        #a123:before{
+            content: 'xxx';
+            padding: 0px 10px;
+            font-size: 20px;
+        }
+        .a + .b {
+            color: red
+        }
+        a, a:link, a:visited, a:active, a:hover {
+            color: red;
+            text-decoration: none;
+        }
+        a:hover {
+            color: white;
+            background-color: red;
+        }
+        input[name^=aa]:focus {
+            border: 1px red dashed;
+        }
+    </style>
+</head>
+<body>
+
+<table class="table">
+    <tbody>
+        <tr>
+            <td>
+                Labas <span id="a123">aaa</span>
+            </td>
+            <td>
+                <table>
+                    <tr>
+                        <td><span class="a">Rytas</span> <span class="b">OOO</span></td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<a href="http://www.delfi.lt" target="_blank">Delfi puslapis</a>
+<input type="text" name="aaa ab">
+
+</body>
+</html>
