@@ -2,9 +2,11 @@
 
 class imone {
     public $pav;
+    public $kodas;
     private $sar = [];
-    function __construct($p){
-        $this->pav = $p;
+    function __construct($p, $k){
+            $this->pav = $p;
+        $this->kodas = $k;
     }
     function darb($vr, $pv, $pr){
        $this->sar[] = [
@@ -14,7 +16,7 @@ class imone {
        ];
     }
     function getInfo(){
-        echo $this->pav . '<br>';
+        echo $this->pav . ' (' . $this->kodas . ')<br>';
         echo '<table>';
         foreach($this->sar as $dar){
             echo '<tr>';
@@ -27,8 +29,9 @@ class imone {
     }
 }
 
-$o = new imone('CodeAcademy');
+$o = new imone('CodeAcademy', '111222333');
 $o->darb('Jonas', 'Jonaitis', 'direktorius');
 $o->darb('Petras', 'Petraitis', 'vadybininkas');
 $o->darb('Antanas', 'Antanaitis', 'darbininkas');
 $o->getInfo();
+echo $o->pav;
