@@ -6,7 +6,7 @@ Sukurti klasę darbuotojai, kurioje yra savybė skirta darbuotojų sąrašui sau
 class darbuotojai {
     public $sar = [];
     function add($ak, $pv, $va, $pa, $at){
-        $this->sar[$ak] = [
+        $this->sar[] = [
             'ak' => $ak,
             'pv' => $pv,
             'va' => $va,
