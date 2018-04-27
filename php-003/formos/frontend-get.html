@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form method="get" action="backend-get.php">
+    <label>Vardas</label><input type="text" name="vardas"><br>
+    <label>Lytis</label>
+        <label>Moteris</label><input type="radio" name="lytis" value="moteris">
+    <label>Vyras</label><input type="radio" name="lytis" value="vyras">
+    <br>
+    <label>Vedes</label>
+    <input type="checkbox" name="vedes" value="taip">
+    <br>
+    <label>Pareigos</label>
+    <select name="pareigos">
+        <option value="direktorius">Direktorius</option>
+        <option value="darbininkas">Darbininkas</option>
+        <option value="vadybininkas">Vadybininkas</option>
+    </select>
+    <br>
+    <label>Pastaba</label>
+    <textarea name="pastaba"></textarea>
+    <br>
+    <input type="submit" value="Siusti">
+</form>
+</body>
+</html>
+// http://test.lt/php-003/formos/backend-get.php?vardas=Anatanas&lytis=moteris&vedes=taip&pareigos=darbininkas&pastaba=pastaba
