@@ -9,7 +9,7 @@ rsort($n);
 var_dump($n);
 
 var_dump($m);
-asort($m);
+c($m);
 var_dump($m);
 ksort($m);
 var_dump($m);
