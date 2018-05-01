@@ -8,7 +8,7 @@ class forma {
         if (file_exists($this->fn)){ // jeigu failas yra (pirmą kartą jo dar nėra, todėl būtų klaida skaitant)
             $f = fopen($this->fn, 'r'); // atsidaryti failą skaitymui
             $s = fread($f, filesize($this->fn)); // nuskaityti iš failo tekstą
-            $this->m = json_decode($s, true); // dekoduoti iš teksta (json formate) į masyvą
+            $this->m = json_decode($s, true); // dekoduoti iš teksta (json formate - nurodant, kad tai asociatyvinis masyvas) į masyvą
             fclose($f); // uždaryti failą
         }
     }
