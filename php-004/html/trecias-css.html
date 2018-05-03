@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        p { text-align: justify }
+        #aaa { color: blue }
+        .abc { font-weight: bold }
+        .abc2 { font-style: italic }
+        .abc { color: red }
+        .x.y {font-size: 24px }
+        .z > .y { font-size: 10px }
+        a {
+            text-decoration: none;
+        }
+        /* unvisited link */
+        a:link {
+            color: red;
+        }
+
+        /* visited link */
+        a:visited {
+            color: purple;
+            text-decoration: none;
+        }
+
+        /* mouse over link */
+        a:hover {
+            color: hotpink;
+            text-decoration: underline;
+        }
+
+        /* selected link */
+        a:active {
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+<p id="aaa" class="z">
+    Lorem <span class="y">ipsum</span> dolor sit amet, consectetur adipisicing elit. Ad beatae debitis delectus deleniti dolore dolores dolorum, <span class="abc abc2">ducimus</span> expedita hic, incidunt <span class="abc2">magni</span>, obcaecati qui quisquam quod sapiente sunt tempora veritatis voluptate.
+</p>
+<p>
+    Lorem <span class="x y">ipsum</span> dolor sit amet, consectetur adipisicing elit. A accusantium alias, architecto at cupiditate dolorem enim ex facere fuga fugiat in ipsum iure neque nostrum quae quaerat ratione sint voluptates.
+</p>
+<a href="https://www.delfi.lt">Delfi</a>
+</body>
+</html>

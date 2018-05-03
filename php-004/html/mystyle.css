@@ -1,0 +1,24 @@
+table td {
+    border: 1px solid #ccc;
+    padding: 5px;
+}
+table {
+    border-collapse: collapse;
+}
+table tr:first-child td:last-child {
+    background-color: yellow
+}
+table tr:last-child td:first-child {
+    background-color: purple;
+    color: white;
+}
+.a:after {
+    content: '.x ';
+}
+.b:before {
+    content: 'y.'
+}
+.abc:hover {
+    background-color: black;
+    color: white;
+}
