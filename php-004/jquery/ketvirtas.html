@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('#btn').click(function(){
+                $.getJSON( "ketvirtas-php.php", function( data ) {
+                   $('p').text(data[0]);
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+<p>Tscias</p>
+<button id="btn">Get from Ajax</button>
+</body>
+</html>

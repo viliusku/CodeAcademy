@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#pirmas").click(function(){
+                alert("!");
+            });
+            $("#antras").click(function(){
+                alert($.trim($('#aaa').text()));
+            });
+        });
+    </script>
+</head>
+<body>
+<p id="aaa">labas</p>
+<button id="pirmas">Pirmas</button>
+<button id="antras">Antras</button>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <style>
+        .table { border-collapse: collapse }
+        .table td {
+            border: 1px solid blue;
+            padding: 15px;
+        }
+    </style>
+    <script>
+        $(document).ready(function(){
+            $("#btn1").click(function(){
+                $('#tbl').addClass('table');
+                $('#tbl tr:first-child td:last-child').css({
+                    'color': 'blue',
+                    'background-color': 'yellow'
+                });
+
+            });
+            $('#tbl tr:last-child td:last-child').hover(function(){
+                $(this).css({
+                    color: 'white',
+                    'background-color': '#000000'
+                })
+            });
+
+        });
+    </script>
+</head>
+<body>
+<table id="tbl">
+    <tr>
+        <td>a1</td>
+        <td>a2</td>
+        <td>a3</td>
+    </tr>
+    <tr>
+        <td>b1</td>
+        <td>b2</td>
+        <td>b3</td>
+    </tr>
+    <tr>
+        <td>c1</td>
+        <td>c2</td>
+        <td>c3</td>
+    </tr>
+</table>
+<button id="btn1">Add class</button>
+</body>
+</html>

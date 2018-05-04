@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function fnc(){
+        var gamintojas;
+        var modelis;
+        var kaina;
+    }
+    var masinos = [];
+    var o = new fnc();
+    o.gamintojas = 'Hondas';
+    o.modelis = 'Civic';
+    o.kaina = 1000;
+    masinos.push(o);
+
+    var o = new fnc();
+    o.gamintojas = 'BMW';
+    o.modelis = '320i';
+    o.kaina = 2000;
+    masinos.push(o);
+
+    console.log(JSON.stringify(masinos));
+</script>
+</body>
+</html>

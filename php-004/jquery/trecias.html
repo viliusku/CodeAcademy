@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            var data = {};
+            $('#btn').click(function(){
+                data['vardas'] = $('form input[name=vardas]').val();
+                data.pareigos = $('form').find('select[name=pareigos]').val();
+                console.log(JSON.stringify(data));
+                return false;
+            });
+            $('.abc').click(function(){
+                $('#btn').hide();
+            });
+            $('.ghi').click(function(){
+                $('#btn').show();
+            });
+        });
+    </script>
+</head>
+<body>
+<form>
+    <label>Vardas</label><input name="vardas"><br>
+    <label>Pareigos</label>
+    <select name="pareigos">
+        <option value="dir">Direktorius</option>
+        <option value="darb">Darbuotojas</option>
+    </select><br>
+    <button id="btn">Submit</button>
+</form>
+<button class="abc">Hide</button>
+<button class="ghi">Show</button>
+</body>
+</html>
