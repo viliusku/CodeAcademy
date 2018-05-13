@@ -44,6 +44,9 @@ Sukurti formą + php (viename faile - nereikia nurodyti formoje action), kuriame
     </div>
     <input type="submit" value="Skaičiuoti">
 </form>
+
+<?php if (count($_POST)>0){ ?>
+
 <table>
     <tr>
         <td colspan="3">Pajamos</td>
@@ -123,3 +126,5 @@ Sukurti formą + php (viename faile - nereikia nurodyti formoje action), kuriame
         </td>
     </tr>
 </table>
+
+<?php } ?>
