@@ -1,3 +1,59 @@
 <!--
-Sukurkite HTML dokumentą, kurio <head> skiltyje būtų aprašytas stilius. Visas dokumento fonas ‐ paveikslėlis, teksto dydis 16px ir #ccc spalva. Dokumente turėtų būti išvesta 3x3 lentelė sudaryta iš <div> elementų, t.y. div langeliai ‐ div eilutėse, o šios ‐ pagrindiniam div elemente. Eilutės lentelėje turi būti su paraštėmis 5px, langeliai lentelėse savo ruožtu taip pat su 5px paraštėmis. Langeliuose į background įdėti paveiksliuką, kuris užimtų visą langelio plotą. Į langelius įrašyti kokį nors tekstą.
+Sukurkite HTML dokumentą, kurio <head> skiltyje būtų aprašytas stilius. Visas dokumento fonas ‐ paveikslėlis, teksto dydis 16px ir pagrindo #ccc spalva. Dokumente turėtų būti išvesta 3x3 lentelė sudaryta iš <div> elementų, t.y. div langeliai ‐ div eilutėse, o šios ‐ pagrindiniam div elemente. Eilutės lentelėje turi būti su paraštėmis 5px, langeliai lentelėse savo ruožtu taip pat su 5px paraštėmis. Langeliuose į background įdėti paveiksliuką, kuris užimtų visą langelio plotą. Į langelius įrašyti kokį nors tekstą.
 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body {
+            background-image: url('https://www.codeacademy.lt/wp-content/uploads/2017/05/logo.png');
+            font-size: 16px;
+            background-color: #ccc;
+        }
+        .table {
+            display: table;
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 5px;
+        }
+        .row {
+            display: table-row;
+            padding-top: 5px;
+        }
+        .cell {
+            display: table-cell;
+            padding: 5px;
+            border: 1px solid white;
+            background-image: url('leaf_nature_green.jpg');
+            background-size: cover;
+            color: white;
+            height: 100px;
+            vertical-align: middle;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<div class="table">
+    <div class="row">
+        <div class="cell">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad</div>
+        <div class="cell">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad</div>
+        <div class="cell">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad</div>
+    </div>
+    <div class="row">
+        <div class="cell">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad</div>
+        <div class="cell">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad</div>
+        <div class="cell">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad</div>
+    </div>
+    <div class="row">
+        <div class="cell">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad</div>
+        <div class="cell">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad</div>
+        <div class="cell">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad</div>
+    </div>
+</div>
+
+</body>
+</html>
