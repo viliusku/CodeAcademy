@@ -1,3 +1,38 @@
 <!--
 Sukurkite HTML dokumentą, kurio <head> skiltyje būtų aprašytas stilius. Visas dokumento fonas - paveikslėlis, teksto dydis 18px ir balta spalva. Dokumente turėtų būti išvesta 2x2 lentelė sudaryta iš <div> elementų, t.y. Div langeliai - div eilutėse, o šios - pagrindiniam div elemente. Eilutės lentelėje turi būti su paraštėmis 3px, langeliai lentelėse savo ruožtu taip pat su 8px paraštėmis. Langelių fono spalva turi būti mėlyna, teksto spalva balta..
 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body {
+            background-image: url('/images/leaf_nature_green.jpg');
+            background-size: 100%;
+            font-size: 18px;
+            background-color: white;
+        }
+        .table { display: table; border-spacing: 1px; }
+        .row { display: table-row; padding: 3px; }
+        .cell {
+            display: table-cell;
+            padding: 8px;
+            background-color: blue;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+<div class="table">
+    <div class="row">
+        <div class="cell">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
+        <div class="cell">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
+    </div>
+    <div class="row">
+        <div class="cell">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
+        <div class="cell">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
+    </div>
+</div>
+</body>
+</html>

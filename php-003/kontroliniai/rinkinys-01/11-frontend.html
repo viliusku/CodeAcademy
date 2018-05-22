@@ -1,0 +1,22 @@
+<!--
+Sukurkite HTML dokumenta su įvedimo forma. Forma turėtu turėti laukus: 3x tekstiniai laukai:  dviračio gamintojas, dviračio modelis, dviračio kaina, 1x radio pasirinkimas (paskirtis): moteriškas, vyriškas, sportinis. Forma turi būti nusiųsta į backend PHP failą metodu POST. Backend faile  pridėkite įrašą į sesiją ir redirektinkite vartotoją atgal į įvedimo formos HTML dokumentą. 
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form method="post" action="11-backend.php">
+    <label>Gamintojas </label><input type="text" name="gamintojas"><br>
+    <label>Modelis </label><input type="text" name="modelis"><br>
+    <label>Kaina </label><input type="text" name="kaina"><br>
+    <label>Paskirtis </label>
+    <input type="radio" name="paskirtis" value="moteriškas">Moteriškas
+    <input type="radio" name="paskirtis" value="vyriškas">Vyriškas
+    <input type="radio" name="paskirtis" value="sportinis">Sportinis<br>
+    <input type="Submit" value="Vykdyti">
+</form>
+</body>
+</html>
