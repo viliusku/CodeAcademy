@@ -7,3 +7,61 @@ Sukurti formą, kur galima įvesti:
 Sukurti mygtuką formoje, kurio pagalbą įdėti svečio duomenis į svečių lentelės apacią. Svečius numeruoti.
 Realizacija panaudojant jQuery.
 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("button").click(function(){
+                var vardas = $('form input[name=vardas]').val();
+                var pavarde = $('form input[name=pavarde]').val();
+                var lytis = $('form input[name=lytis]').val();
+                var patiekalas = $('form select[name=patiekalas]').val();
+                $('table tbody').append('<tr><td></td><td>' + vardas + '</td><td>' + pavarde + '</td><td>' + lytis + '</td><td>' + patiekalas +'</td></tr>');
+                var m = $('table tbody tr');
+                for (var i=0; i<m.length; i++) $(m[i]).find('td:first-child').text(i + 1);
+                return false;
+            });
+        });
+    </script>
+    <style>
+        table { border-collapse: collapse; margin-top: 10px }
+        td, th {
+            border: 1px solid #ccc;
+            padding: 10px;
+        }
+        th { background-color: #eee }
+    </style>
+</head>
+<body>
+<form>
+    <label>Vardas</label><input type="text" name="vardas"><br>
+    <label>Pavardė</label><input type="text" name="pavarde"><br>
+    <label>Lytis</label>
+    <input type="radio" name="lytis" value="vyras">Vyras
+    <input type="radio" name="lytis" value="moteris">Moteris
+    <br>
+    <select name="patiekalas">
+        <option value="zuvis">Žuvis</option>
+        <option value="mesa">Mėsa</option>
+        <option value="vegetariskas">Vegetariškas</option>
+    </select><br>
+    <button>Vykdyti</button>
+</form>
+<table>
+    <thead>
+        <tr>
+            <th>Nr.</th>
+            <th>Vardas</th>
+            <th>Pavardė</th>
+            <th>Lytis</th>
+            <th>Patiekalas</th>
+        </tr>
+    </thead>
+    <tbody></tbody>
+</table>
+</body>
+</html>
