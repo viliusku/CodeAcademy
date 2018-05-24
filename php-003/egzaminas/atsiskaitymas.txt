@@ -1,3 +1,3 @@
-1. Sprendimų failus pavadinti skaičiais nuo 1 iki 12, pvz.: 1.html, 5.php, 11-frontend.html, 11-backend.html
+1. Sprendimų failus pavadinti skaičiais nuo 1 iki 12, pvz.: 1.html, 5.php, 11-frontend.html, 11-backend.html. Užduočių tekstus patalpinti failo pradžioje.
 2. Sprendimų failus sudėti į vieną archyvą (zip arba rar), kurį pavadinti pvz.: vardas.pavarde.zip.
 3. Sprendimų archyvą nusiųsti el. paštu adresu: viliusku@gmail.com
