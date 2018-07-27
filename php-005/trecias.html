@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .a {
+            font-weight: bold;
+        }
+        .para  > .a {
+            color: red;
+        }
+        table {
+            border-spacing: 10px 20px;
+            border-collapse: collapse;
+        }
+        td {
+            border: 1px solid rgba(55,125,88, 0.5);
+            padding: 10px 20px;
+        }
+        table > tbody > tr:first-child > td:first-child {
+            background-color: yellow;
+        }
+        table > tbody > tr:last-child > td:first-child {
+            color: red;
+        }
+        .xyz:hover {
+            background-color: black;
+            color: white;
+        }
+        .hbn:before{
+            content: 'aaa ';
+        }
+        .hbn:after{
+            content: ' bbb';
+            color: blue;
+            font-style: italic;
+            text-decoration: underline;
+        }
+        .abc:before {
+            content: attr(data-mano);
+        }
+
+    </style>
+</head>
+<body>
+<p class="para">
+    Lorem ipsum dolor <span class="a">sit amet</span>, consectetur adipisicing elit. Animi at aut cumque dicta, dignissimos dolorem, est fugiat hic in labore modi mollitia natus nobis non, numquam omnis ratione? Quasi, Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, architecto at commodi dolorem eius hic illo laboriosam magni molestias mollitia optio pariatur perspiciatis, praesentium quis ratione sapiente vel vitae! Maxime?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto cumque delectus dicta illo pariatur possimus quos! Accusantium deleniti deserunt incidunt iste labore, nemo neque officia tempora. Expedita minus quae tempora?
+</p>
+
+<p class="para2">
+    Lorem ipsum dolor <span class="a">sit amet</span>, consectetur adipisicing elit. Animi at aut cumque dicta, dignissimos dolorem, est fugiat hic in labore modi mollitia natus
+</p>
+
+<div class="para">
+    Lorem ipsum dolor <span class="a">sit amet, consectetur</span> adipisicing elit. Architecto consectetur cum eligendi facere facilis in ipsam iste laborum laudantium mollitia porro, qui recusandae sapiente sunt voluptatum. Aut minus nobis possimus.
+    <div>Lorem ipsum dolor <span class="a">sit amet</span>, consectetur adipisicing elit. Ab aspernatur dolor dolore est fuga maiores obcaecati, odio vero? Accusantium commodi culpa deserunt inventore quasi saepe, tempora unde vitae voluptate voluptatum?</div>
+</div>
+
+<table>
+    <tr>
+        <td>7</td>
+        <td>8</td>
+        <td>10</td>
+    </tr>
+    <tr>
+        <td>17</td>
+        <td class="abc" data-mano="labas ">18</td>
+        <td>11</td>
+    </tr>
+    <tr>
+        <td>27</td>
+        <td class="hbn">28</td>
+        <td class="xyz">12</td>
+    </tr>
+</table>
+
+</body>
+</html>
