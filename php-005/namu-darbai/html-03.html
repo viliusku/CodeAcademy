@@ -1,3 +1,55 @@
 <!--
 Naudojant div elementus (tag) nupiešti olimpinį ženklą (penki žiedai)
 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .pagrindas {
+            position: relative;
+            width: 420px;
+            height: 270px;
+            margin: 100px auto;
+        }
+        .ziedas {
+            width: 150px;
+            height: 150px;
+            position: absolute;
+            border: 10px solid black;
+            border-radius: 50%;
+        }
+        .z1 {
+            left: 0px; top: 0px;
+            border-color: blue;
+        }
+        .z2 {
+            left: 125px; top: 0px;
+            border-color: blue;
+        }
+        .z3 {
+            left: 250px; top: 0px;
+            border-color: red;
+        }
+        .z4 {
+            left: 70px; top: 100px;
+            border-color: yellow;
+        }
+        .z5 {
+            left: 180px; top: 100px;
+            border-color: green;
+        }
+    </style>
+</head>
+<body>
+
+<div class="pagrindas">
+    <div class="ziedas z1"></div>
+    <div class="ziedas z2"></div>
+    <div class="ziedas z3"></div>
+    <div class="ziedas z4"></div>
+    <div class="ziedas z5"></div>
+</div>
+</body>
+</html>
