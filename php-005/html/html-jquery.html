@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            var data = new Date();
+            var a = data.getDay();
+            switch (a) {
+                case 0:
+                    day = "Sunday";
+                    break;
+                case 1:
+                    day = "Monday";
+                    break;
+                case 2:
+                    day = "Tuesday";
+                    break;
+                case 3:
+                    day = "Wednesday";
+                    break;
+                case 4:
+                    day = "Ketvirtadienis";
+                    break;
+                case 5:
+                    day = "Friday";
+                    break;
+                case  6:
+                    day = "Saturday";
+            }
+            $('.demo').html("Today is " + day);
+        });
+    </script>
+</head>
+
+<body>
+
+<p class="demo">aaaa</p>
+
+</body>
+</html>

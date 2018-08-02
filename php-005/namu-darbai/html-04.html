@@ -2,3 +2,40 @@
 Sukurkite HTML dokumentą panaudodami Bootstrap karkasą. Dokumente turi būti
 dvi eilutės, kuriose yra 4 stulpeliai: 2 dalys, 2 dalys, 2 dalys, 6 dalys. Naudojant boostrap klases stulpeliams uždėti skirtingas background splavas, borderius. Kiekvienam stulpeliui uždėti paraštes. Stulpeliusoe sudėti tekstą. Teksto pabaigoje patalpinti button'ą, naudojant bootstrap klases. Button'ų spalvas parinkti skirtingas.
 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="container">
+    <div class="row m-4">
+        <div class="col-2 bg-success border p-3">abc1 <button type="button" class="btn">Basic</button></div>
+        <div class="col-2 bg-primary border p-3">abc2 <button type="button" class="btn btn-primary">Primary</button></div>
+        <div class="col-2 bg-secondary border p-3">abc3 <button type="button" class="btn btn-secondary">Secondary</button></div>
+        <div class="col-6 bg-warning border p-3">abc4 <button type="button" class="btn btn-success">Success</button></div>
+    </div>
+    <div class="row m-4">
+        <div class="col-2 bg-success border p-3">abc1 <button type="button" class="btn">Basic</button></div>
+        <div class="col-2 bg-primary border p-3">abc2 <button type="button" class="btn btn-primary">Primary</button></div>
+        <div class="col-2 bg-secondary border p-3">abc3 <button type="button" class="btn btn-secondary">Secondary</button></div>
+        <div class="col-6 bg-warning border p-3">abc4 <button type="button" class="btn btn-success">Success</button></div>
+    </div>
+</div>
+</body>
+</html>
