@@ -1,3 +1,31 @@
 <!--
 Sukurkite rūšiuotą sąrašą. Ant sąrašo elementų uždėkite mouseover įvykį, kurio pagalba padidinkite pasirinkto elemento fonto dydį du kartus.
 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            var sar = $('#sarasas');
+            $('li', sar).on('mouseover', function(){
+                $(this).css('font-size', '200%');
+            });
+            $('li', sar).on('mouseout', function(){
+                $(this).css('font-size', '100%');
+            });
+        })
+    </script>
+</head>
+<body>
+<ol id="sarasas">
+    <li>aaa</li>
+    <li>bbb</li>
+    <li>ccc</li>
+    <li>ddd</li>
+    <li>eee</li>
+</ol>
+</body>
+</html>
