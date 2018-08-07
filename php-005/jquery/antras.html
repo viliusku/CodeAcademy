@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('#tbl td').click(function(){
+                //console.log($(this).data('my'));
+                //console.log($(this).html());
+                //console.log($(this).attr('data-my'));
+                if ($(this).hasClass('dark')) {
+                    $(this).removeClass('dark').css({
+                        'border-color': '#cccccc',
+                        'font-weight': 'normal'
+                    });
+
+                }
+                else {
+                    $(this).addClass('dark').css({
+                        'border-color': 'red',
+                        'font-weight': 'bold'
+                    });
+                }
+            });
+        });
+    </script>
+    <style>
+        .dark {
+            background-color: silver;
+            color: red;
+        }
+        td {
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <table id="tbl" class="table table-bordered">
+        <tr><td data-my="11">a1</td><td data-my="12">b1</td><td data-my="13">c1</td></tr>
+        <tr><td data-my="21">a2</td><td data-my="22">b2</td><td data-my="23">c2</td></tr>
+        <tr><td data-my="31">a3</td><td data-my="32">b3</td><td data-my="33">c3</td></tr>
+    </table>
+    </div>
+</body>
+</html>

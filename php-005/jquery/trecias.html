@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('#btn').click(function(){
+                /*
+                $.ajax({ // AJAX call
+                    type: 'GET', // GET METHOD
+                    url: 'trecias.json',
+                    dataType: "json", // AJAX data type
+                    success: function(data, textStatus, jqXHR) { // AJAX call success function
+                       $('input[name=vardas]', '#frm').val(data.vardas);
+                        $('input[name=pozicija]', '#frm').val(data.pozicija);
+                        $('input[name=atlyginimas]', '#frm').val(data.atlyginimas);
+                    },
+                    error: function(jqXHR, textStatus, errorThrown) { // AJAX call failure function
+                        console.log(jqXHR.responseText);
+                    }
+                });
+                */
+                $.getJSON( "trecias.json", function( data ) {
+                    $('input[name=vardas]', '#frm').val(data.vardas);
+                    $('input[name=pozicija]', '#frm').val(data.pozicija);
+                    $('input[name=atlyginimas]', '#frm').val(data.atlyginimas);
+                });
+            });
+            $('#btn2').click(function() {
+                var vardas = $('input[name=vardas]', '#frm').val();
+                var pozicija = $('input[name=pozicija]', '#frm').val();
+                var atlyginimas = $('input[name=atlyginimas]', '#frm').val();
+                var eil = $('#tbl tbody tr').length;
+                $('#tbl tbody').append(
+                    '<tr>' +
+                    '<td>' + ++eil + '</td>' +
+                    '<td>' + vardas + '</td>' +
+                    '<td>' + pozicija + '</td>' +
+                    '<td>' + atlyginimas + '</td>' +
+                    '</tr>');
+            });
+        });
+    </script>
+</head>
+<body>
+<form id="frm">
+    <label>Vardas</label><input name="vardas"><br>
+    <label>Pozicija</label><input name="pozicija"><br>
+    <label>Atlyginimas</label><input name="atlyginimas"><br>
+    <button id="btn" type="button">Vykdyti</button>
+    <button id="btn2" type="button">Į lentelę</button>
+</form>
+
+<table id="tbl">
+    <thead>
+        <th>No</th>
+        <th>Vardas</th>
+        <th>Pozicija</th>
+        <th>Atlyginimas</th>
+    </thead>
+    <tbody></tbody>
+</table>
+</body>
+</html>

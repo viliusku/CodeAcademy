@@ -1,3 +1,41 @@
 <!--
 Padarykite lentelę 3x3. Padarykite formą, kurios įvedimo lauke galima būtų įvesti spalvos kodą/pavadinimą. Ant lentelės eilučių uždėkite click įvykį, kurio pagalba nurodytą formoje spalvos kodą galima būtų uždėti visoms eilutės celėms kaip background spalvą.
 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('#btn').click(function(){
+                var spalva = $('#frm input[name=spalva]').val();
+                $('.tbl td').css('background-color', spalva);
+                return false;
+            });
+        });
+    </script>
+    <style>
+        .tbl {
+            border-collapse: collapse;
+        }
+        .tbl td {
+            border: 1px solid black;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+<table class="tbl">
+    <tr><td>a1</td><td>a2</td><td>a3</td></tr>
+    <tr><td>b1</td><td>b2</td><td>b3</td></tr>
+    <tr><td>c1</td><td>c2</td><td>c3</td></tr>
+</table>
+<hr>
+<form id="frm">
+    <input name="spalva" type="text"><br>
+    <input id="btn" type="button" value="Ideti">
+</form>
+</body>
+</html>

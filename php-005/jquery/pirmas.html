@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('#btn').click(function(e){
+                console.log('click paspaustas');
+                var t = $('#para').text();
+                var t2 = $('input[name=tekstas]', 'form').val();
+                t += ' ' + t2;
+                $('#para').text(t);
+                return false;
+            });
+            $('input[name=tekstas]', 'form').on('keypress', function(ev){
+                var e = ev;
+                console.log('charCode: ' + e.originalEvent.charCode + ', keyCode: ' + e.originalEvent.keyCode);
+                return false;
+            });
+        });
+    </script>  <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+<p id="para">Labas</p>
+<form>
+    <input name="tekstas" type="text">
+</form>
+<button id="btn">Mygtukas</button>
+</body>
+</html>

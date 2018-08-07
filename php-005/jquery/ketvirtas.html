@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('ul li').eq(2).css('color', 'red');
+            $('ul li').eq(3).parent().css('margin-top', '100px');
+            $('ul').find('li.abc').css('text-decoration', 'underline');
+        });
+    </script>
+</head>
+<body>
+<ul>
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li class="abc">4</li>
+    <li>5</li>
+</ul>
+</body>
+</html>
