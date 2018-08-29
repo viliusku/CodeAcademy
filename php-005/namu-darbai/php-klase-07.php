@@ -1,0 +1,4 @@
+<?php
+/**
+Sukurkite PHP skriptą, kuriame būtų aprašyta klasė “šalis”, kuri turi savybes ‐ pavadinimas, gyventojų skaičius, žemynas. Sukurkite standartinį klasės __construct metodą, kuriam perdavus tris parametrus ‐ pavadinimas, gyventojų skaičius, žemynas ‐ perduotus parametrus padėtų į savo savybes. Sukurkite klases "didelė" ir "maza", kurios paveldi "šalis" klasę. "šalis" klasę papildykite metodu “info”, kuris išvestų suformatuotą eilutę “pavadinimas, gyventojų skaičius, žemynas”. "didelė" klasėje perrašykite metodą "info", pakeisdami išvedamą eilutę į “pavadinimas, gyventojų skaičius, žemynas (didelis šalis)”. didelė šalis ‐ tiesiog paprastas žodis. Patkrinkite visų trijų klasių metodo “info” veikimą.
+ */
