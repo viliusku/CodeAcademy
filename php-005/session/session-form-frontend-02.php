@@ -15,7 +15,7 @@
     <button>Vykdyti</button>
 
     <?php
-    echo "<table>";
+    echo "<table>";PHP 07/23
     for ($i=0; $i<count($_SESSION['asmenys']); $i++){
         echo "<tr>";
         echo "<td>" . ($i + 1) . "</td>";
