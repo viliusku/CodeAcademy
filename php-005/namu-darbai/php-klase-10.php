@@ -1,0 +1,4 @@
+<?php
+/**
+Sukurkite PHP skriptą, kuriame būtų aprašyta klasė “darbuotojas”, kuri turi savybes - vardas, pavardė, amžius. Sukurkite standartinį klasės __construct metodą, kuriam perdavus tris parametrus - vardas, pavardė, amžius - perduotus parametrus padėtų į savo savybes. Panaudodami prieš tai sukurtą klasę darbuotojas, sukurkite klases vadybininkas ir darbininkas, kurios paveldi darbuotojas klasę. Darbuotojas klasę papildykite metodu “info”, kuris išvestų suformatuotą eilutę “Vardas, Pavardė (amžius)”. Vadybininkas klasėje perrašykite metodą info, pakeisdami išvedamą eilutę į “Pavardė, Vardas, vadybininkas”. Vadybininkas - tiesiog paprastas žodis.
+ */
