@@ -1,0 +1,49 @@
+Naudojantis PHP kurse įgytomis žiniomis sukurti svetainę kur yra pateikiama informacija apie Eurolygos komandas. Naudoti Bootstrap ir Font Awesome. Duomenis saugoti duomenų bazės lentelėje.
+
+Informacijos svetainėje išdėstymas:
+
+1. Viršutinė dalis. Eilute išdėstyta:
+a) logotipas (pasirinkti kokį nors internete arba pasigaminti su kokia nors logo online paslauga, pvz. https://www.freelogoservices.com)
+b) Home
+c) List
+d) Create
+e) Kokios nors kitos naudingos nuorodos
+
+Prie kiekvieno sąrašo elemento įdėti ikoną (Font Awesome)
+
+2. Vidurinė dalis. Skirta informacijai rodyti
+3. Apatinė dalis skirta copyright'ui įdėti.
+
+Galima naudoti įprastus div'us arba HTML 5 layout galimybes: https://www.w3schools.com/html/html_layout.asp
+
+Home puslapyje patalpinti slaidus naudojant Bootstrap karuselę https://www.w3schools.com/bootstrap4/bootstrap_carousel.asp
+
+List puslapyje turi būti sąrašas:
+
+1. Komandos logotipas (nuoroda). Uždėti nuorodą į oficialę klubo svetainę.
+2. Komandos pavadinimas
+3. Komandos šalis
+4. Komandos treneris
+
+List puslapio eilutėse įdėti mygtukus: Edit ( iškviesti formą redagavimui), Delete (pašalinti eilutę). Ties mygtukais turi būti ikonos. Iš redagavimo formos grižti atgal į sąrašą. Redagavimo formoje prieš ją atidarant nuskaityti duomenis apie komandą ir patalpinti į formos laukus (įrašo id saugoti hidden tipo formos input lauke). Po pašalinimo taip pat. Formos submit'as turi atlikti duomenų pakeitimą
+
+Create atveju turi būti atidaroma ta pati redagavimo forma tik su tuščiais laukais (įrašo id hidden formos lauke turi būti tuščias).
+
+Create / redagavimo formos laukai:
+1. Logo
+2. Pavadinimas
+3. Šalis (pasirinkti iš sąrašo)
+4. Treneris
+5. Prezidentas
+6. Adresas (textarea)
+7. Arena
+8. Telefonas
+9. Oficiali svetainė
+
+Interfeisui su duomenų baze sukurkite klasę, kuri atliktų:
+a) sukurtų konektorių
+b) atliktų paiešką(select) ir gražintu sąrašą (List)
+b) gautų duomenis apie komandą (select) ir gražintų (Edit forma)
+d) sukurtų naują įrašą (insert) pagal formos duomenis
+e) pataisytu įrašą (update) pagal formos duomenis
+f) ištrintų įrašą (delete) pagal mygtuką sąraše.
