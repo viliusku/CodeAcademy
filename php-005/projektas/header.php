@@ -39,7 +39,7 @@
                         <a class="nav-link" href="sarasas.php"><i class="fas fa-list"></i> Sąrašas</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href=""><i class="fas fa-plus-square"></i>
+                        <a class="nav-link" href="forma.php"><i class="fas fa-plus-square"></i>
                             Sukūrti</a>
                     </li>
                     <li class="nav-item">

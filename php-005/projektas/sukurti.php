@@ -1,6 +1,6 @@
 <?php
 include 'header.php';
 include 'euroleague_class.php';
-include 'redaguoti.php';
+include 'forma.php';
 include 'footer.php';
 ?>

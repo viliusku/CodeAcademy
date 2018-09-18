@@ -34,40 +34,30 @@ class teams {
             return false;
         }
     }
-    /*
-    public function delCar($id){
-        $this->getCnn('localhost', 'auto', 'root');
+    public function teamGet($id){
         $this->message = '';
         try {
-            $sql = "delete from auto where car_id=:id";
-            $res = $this->cnn->prepare($sql);
-            $res->execute([':id' => $id]);
-            $res->closeCursor();
-            return true;
-        }
-        catch(PDOException $e) {
-            $this->message = $e->getMessage();
-            return false;
-        }
-    }
-    public function getCar($id){
-        $this->getCnn('localhost', 'auto', 'root');
-        $this->message = '';
-        try {
-            $sql = "select * from auto where car_id=:id";
+            $sql = "select * from teams where team_id=:id";
             $res = $this->cnn->prepare($sql);
             $res->execute([':id' => $id]);
             if ($row = $res->fetch()) {
-                $m = [];
-                $m['id'] = $row['car_id'];
-                $m['gamintojas'] = $row['car_gamintojas'];
-                $m['modelis'] = $row['car_modelis'];
-                $m['metai'] = $row['car_metai'];
-                $m['kaina'] = $row['car_kaina'];
+                $m = [
+                    'team_id' => $row['team_id'],
+                    'team_logo' => $row['team_logo'],
+                    'team_url' => $row['team_url'],
+                    'team_name' => $row['team_name'],
+                    'team_country' => $row['team_country'],
+                    'team_coach' => $row['team_coach'],
+                    'team_president' => $row['team_president'],
+                    'team_address' => $row['team_address'],
+                    'team_arena' => $row['team_arena'],
+                    'team_phone' => $row['team_phone'],
+                    'team_url' => $row['team_url']
+                ];
                 $res->closeCursor();
                 return $m;
             } else {
-                $this->message = "Automobilis nerastas";
+                $this->message = "Komanda nerasta";
                 return false;
             }
         }
@@ -76,18 +66,24 @@ class teams {
             return false;
         }
     }
-    public function updCar($id, $gamintojas, $modelis, $metai, $kaina){
-        $this->getCnn('localhost', 'auto', 'root');
+
+    public function teamCreate($item){
         $this->message = '';
         try {
-            $sql = "update auto set car_gamintojas=:gam, car_modelis=:mod, car_metai=:met,car_kaina=:kai where car_id=:id";
+            $sql = "insert into teams (team_logo,team_name,team_country,team_coach,team_president,team_address,team_arena,team_phone,team_url)";
+            $sql.= "values (:logo,:name,:country,:coach,:president,:address,:arena,:phone,:url)";
             $res = $this->cnn->prepare($sql);
             $res->execute([
-                ':id' => $id,
-                ':gam' => $gamintojas,
-                ':mod' => $modelis,
-                ':met' => $metai,
-                ':kai' => $kaina
+                ':logo' => $item['team_logo'],
+                ':url' => $item['team_url'],
+                ':name' => $item['team_name'],
+                ':country' => $item['team_country'],
+                ':coach' => $item['team_coach'],
+                ':president' => $item['team_president'],
+                ':address' => $item['team_address'],
+                ':arena' => $item['team_arena'],
+                ':phone' => $item['team_phone'],
+                ':url' => $item['team_url']
             ]);
             $res->closeCursor();
             return true;
@@ -97,17 +93,23 @@ class teams {
             return false;
         }
     }
-    public function insCar($gamintojas, $modelis, $metai, $kaina){
-        $this->getCnn('localhost', 'auto', 'root');
+    public function teamUpdate($item){
         $this->message = '';
         try {
-            $sql = "insert into auto (car_gamintojas, car_modelis, car_metai,car_kaina) value(:gam, :mod, :met, :kai)";
+            $sql = "update teams set team_logo=:logo,team_name=:name,team_country=:country,team_coach=:coach,team_president=:president,team_address=:address,team_arena=:arena,team_phone=:phone,team_url=:url where team_id=:id";
             $res = $this->cnn->prepare($sql);
             $res->execute([
-                ':gam' => $gamintojas,
-                ':mod' => $modelis,
-                ':met' => $metai,
-                ':kai' => $kaina
+                ':id' => $item['team_id'],
+                ':logo' => $item['team_logo'],
+                ':url' => $item['team_url'],
+                ':name' => $item['team_name'],
+                ':country' => $item['team_country'],
+                ':coach' => $item['team_coach'],
+                ':president' => $item['team_president'],
+                ':address' => $item['team_address'],
+                ':arena' => $item['team_arena'],
+                ':phone' => $item['team_phone'],
+                ':url' => $item['team_url']
             ]);
             $res->closeCursor();
             return true;
@@ -117,5 +119,18 @@ class teams {
             return false;
         }
     }
-    */
+    public function teamDelete($id){
+        $this->message = '';
+        try {
+            $sql = "delete from teams where team_id=:id";
+            $res = $this->cnn->prepare($sql);
+            $res->execute([':id' => $id]);
+            $res->closeCursor();
+            return true;
+        }
+        catch(PDOException $e) {
+            $this->message = $e->getMessage();
+            return false;
+        }
+    }
 }

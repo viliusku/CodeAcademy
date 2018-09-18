@@ -4,9 +4,8 @@ include 'euroleague_class.php';
 
 $o = new teams("localhost", "bandymas", "bandymas", "bandymas");
 $items = $o->getTeams();
-
 ?>
-<form method="POST">
+<form method="POST" action="forma.php">
     <table class="table table-striped table-bordered">
         <thead class="thead-light">
             <tr>
@@ -41,5 +40,6 @@ $items = $o->getTeams();
     </table>
 </form>
 <?php
+
 include 'footer.php';
 ?>
