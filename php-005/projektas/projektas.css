@@ -1,0 +1,32 @@
+.header {
+    height: 170px;
+}
+.body {
+
+}
+.footer {
+    background-color: #555;
+    color: white;
+    text-align: center;
+    padding: 5px 0px
+}
+.header-top {
+    float: right;
+}
+.header-top-phone {
+    white-space: nowrap;
+    line-height: 42px;
+}
+.header-top-fb {
+    color: #3B5998;
+    font-size: 28px;
+}
+.header-menu {
+    clear: both;
+    width: 80%;
+}
+.header-menu img { max-height: 80px }
+.body-text p {
+    width: 500px;
+    text-align: center;
+}
