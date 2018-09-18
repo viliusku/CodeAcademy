@@ -1,6 +1,6 @@
 <?php
 include 'header.php';
-include 'auto_class.php';
+include 'eroleague_class.php';
 $auto = new cars();
 $result = $auto->updCar($_POST['id'], $_POST['gamintojas'], $_POST['modelis'], $_POST['metai'], $_POST['kaina']);
 if ($result) header('location: /php-002/auto/sarasas.php');
