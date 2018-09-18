@@ -30,3 +30,9 @@
     width: 500px;
     text-align: center;
 }
+.table td {
+    vertical-align: middle
+}
+.table td img {
+    max-height: 45px;
+}

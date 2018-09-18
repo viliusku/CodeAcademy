@@ -1,41 +1,40 @@
 <?php
-class cars {
-    private $cnn;
+class teams {
+    private $cnn = false;
     public $message = '';
-    private function getCnn($srv, $db, $usr, $psw = null){
+    function __construct($srv, $db, $usr, $psw = null){
         try {
             $this->cnn = new PDO('mysql:host='.$srv.';dbname='.$db, $usr, $psw);
             $this->cnn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         }
         catch(PDOException $e) {
             $this->message = $e->getMessage();
-            return false;
+            $this->cnn = false;
         }
-        return true;
     }
-    public function getList(){
-        $this->getCnn('localhost', 'auto', 'root');
-        $cars = []; $i = 0; $this->message = '';
+    public function getTeams(){
+        $items = []; $i = 0; $this->message = '';
         try {
-            $res = $this->cnn->query("select * from auto order by car_gamintojas, car_modelis");
+            $res = $this->cnn->query("select * from teams order by team_name");
             while ($row = $res->fetch()) {
-                $m = [];
-                $m['nr'] = ++$i;
-                $m['id'] = $row['car_id'];
-                $m['gamintojas'] = $row['car_gamintojas'];
-                $m['modelis'] = $row['car_modelis'];
-                $m['metai'] = $row['car_metai'];
-                $m['kaina'] = $row['car_kaina'];
-                $cars[] = $m;
+                $items[] = [
+                    'team_id' => $row['team_id'],
+                    'team_logo' => $row['team_logo'],
+                    'team_url' => $row['team_url'],
+                    'team_name' => $row['team_name'],
+                    'team_country' => $row['team_country'],
+                    'team_coach' => $row['team_coach']
+                ];
             }
             $res->closeCursor();
-            return $cars;
+            return $items;
         }
         catch(PDOException $e) {
             $this->message = $e->getMessage();
             return false;
         }
     }
+    /*
     public function delCar($id){
         $this->getCnn('localhost', 'auto', 'root');
         $this->message = '';
@@ -118,4 +117,5 @@ class cars {
             return false;
         }
     }
+    */
 }
