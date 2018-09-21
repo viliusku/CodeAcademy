@@ -1,4 +1,4 @@
 <?php
 /*
- Sukurti funkciją, kuri išveda visas išeigines dienas (datas) per nurodytą mėnesį (parametras). Išeiginės dienos: šeštadienis ir sekmadienis.
+ Sukurti funkciją, kuri išveda visas išeigines dienas (datas) per nurodytą mėnesį (funkcijos parametrai - metai, mėnuo). Išeiginės dienos: šeštadienis ir sekmadienis.
  */
