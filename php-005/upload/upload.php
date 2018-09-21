@@ -2,13 +2,13 @@
 
 echo $_SERVER['DOCUMENT_ROOT'] . '<br>';
 var_dump($_FILES); echo '<br>';
-$target_dir = $_SERVER['DOCUMENT_ROOT'] . '/vk/php-005/upload/upl';
+$target_dir = $_SERVER['DOCUMENT_ROOT'] . '/php-005/upload/upl';
 echo $target_dir .'<br>';
 $target_file = $target_dir . '/' . basename($_FILES["fileToUpload"]["name"]);
 echo $target_file . '<br>';
 $uploadOk = 0;
 echo pathinfo($target_file,PATHINFO_EXTENSION) . '<br>';
-//exit;
+
 $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
 // Check if image file is a actual image or fake image
 if(isset($_POST["submit"])) {
@@ -21,6 +21,7 @@ if(isset($_POST["submit"])) {
         echo "File is not an image.<br>";
     }
 }
+
 // Allow certain file formats
 if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
     && $imageFileType != "gif" ) {
